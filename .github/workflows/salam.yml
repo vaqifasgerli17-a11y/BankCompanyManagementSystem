@@ -1,0 +1,13 @@
+name: Ilk Avtomatlasdirma
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  salamlama-isi:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Ekrana mesaj yazdır
+      run: echo "GitHub Actions uğurla çalışır!"
