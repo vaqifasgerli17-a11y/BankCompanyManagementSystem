@@ -4,12 +4,10 @@
 
 using namespace std;
 
-// ---------- Employee ----------
 Employee::Employee(int id_, string name_, double salary_) : id(id_), name(name_), salary(salary_) {}
 int Employee::getId() const { return id; }
 Employee::~Employee() {}
 
-// ---------- Developer ----------
 Developer::Developer(int id, string name, double salary, string lang)
     : Employee(id, name, salary), language(lang) {}
 
@@ -20,7 +18,7 @@ void Developer::show() const {
          << " Maas:" << calculateSalary() << endl;
 }
 
-// ---------- Manager ----------
+
 Manager::Manager(int id, string name, double salary, int team)
     : Employee(id, name, salary), teamSize(team) {}
 
@@ -31,7 +29,6 @@ void Manager::show() const {
          << " Maas:" << calculateSalary() << endl;
 }
 
-// ---------- Intern ----------
 Intern::Intern(int id, string name, double salary) : Employee(id, name, salary) {}
 
 double Intern::calculateSalary() const { return salary; }
@@ -40,7 +37,6 @@ void Intern::show() const {
     cout << "[Intern] " << id << " " << name << " Maas:" << calculateSalary() << endl;
 }
 
-// ---------- Company ----------
 void Company::add(Employee* e) { workers.push_back(e); }
 
 void Company::showAll() const {
