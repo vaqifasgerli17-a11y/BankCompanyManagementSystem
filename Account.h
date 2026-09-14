@@ -4,9 +4,6 @@
 #include <string>
 #include <fstream>
 
-// =====================================================================
-//  ACCOUNT  (Hesab + Kart + ATM birləşməsi)
-// =====================================================================
 class Account {
 private:
     int id;
