@@ -3,11 +3,9 @@
 
 using namespace std;
 
-// ---------- Payment ----------
 Payment::Payment(double a) : amount(a) {}
 Payment::~Payment() {}
 
-// ---------- CardPayment ----------
 CardPayment::CardPayment(double a, string card, string bank)
     : Payment(a), cardNumber(card), bankName(bank) {}
 
@@ -19,7 +17,6 @@ void CardPayment::show() const {
     cout << "[KART] " << bankName << " | " << cardNumber << " | " << amount << " AZN\n";
 }
 
-// ---------- CashPayment ----------
 CashPayment::CashPayment(double a, string r) : Payment(a), receiver(r) {}
 
 void CashPayment::pay() {
@@ -30,7 +27,6 @@ void CashPayment::show() const {
     cout << "[NAGD] Alici: " << receiver << " | " << amount << " AZN\n";
 }
 
-// ---------- CryptoPayment ----------
 CryptoPayment::CryptoPayment(double a, string w, string c) : Payment(a), wallet(w), coin(c) {}
 
 void CryptoPayment::pay() {
@@ -41,7 +37,6 @@ void CryptoPayment::show() const {
     cout << "[KRIPTO] " << coin << " | " << wallet << " | " << amount << "\n";
 }
 
-// ---------- PaymentSystem ----------
 void PaymentSystem::addPayment(Payment* p) { payments.push_back(p); }
 
 void PaymentSystem::processAll() {
