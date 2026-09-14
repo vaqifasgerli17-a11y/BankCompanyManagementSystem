@@ -4,9 +4,6 @@
 #include <string>
 #include <vector>
 
-// =====================================================================
-//  EMPLOYEE / COMPANY  (polimorfizm: Developer / Manager / Intern)
-// =====================================================================
 class Employee {
 protected:
     int id;
