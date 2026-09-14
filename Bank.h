@@ -5,9 +5,7 @@
 #include <string>
 #include "Account.h"
 
-// =====================================================================
-//  BANK  (Hesab idarəetməsi + ATM girişi)
-// =====================================================================
+
 class Bank {
 private:
     std::vector<Account> accounts;
