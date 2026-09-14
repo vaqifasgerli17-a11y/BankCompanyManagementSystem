@@ -4,9 +4,6 @@
 #include <string>
 #include <vector>
 
-// =====================================================================
-//  PAYMENT SYSTEM  (polimorfizm: Card / Cash / Crypto)
-// =====================================================================
 class Payment {
 protected:
     double amount;
